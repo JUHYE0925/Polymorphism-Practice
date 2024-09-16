@@ -1,6 +1,7 @@
 public interface User {
 
     public static final boolean isAppOn = false;
+    public static final boolean isPlayMusic = false;
 
     public abstract void startApp();
 
