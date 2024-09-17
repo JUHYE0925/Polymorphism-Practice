@@ -3,7 +3,8 @@ public class User1 implements User {
 
     @Override
     public void startApp() {
-
+    MusicApp music = new MusicApp();
+    music.startApp();
     }
 
     @Override
