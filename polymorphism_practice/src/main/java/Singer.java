@@ -1,4 +1,4 @@
-public class User2 implements User{
+public class Singer implements User{
     @Override
     public void startApp() {
 

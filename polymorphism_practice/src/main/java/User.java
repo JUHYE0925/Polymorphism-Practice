@@ -3,6 +3,8 @@ public interface User {
     public static final boolean isAppOn = false;
     public static final boolean isPlayMusic = false;
 
+    MusicApp music = new MusicApp();
+
     public abstract void startApp();
 
     public abstract void chooseFirstSong();

@@ -60,6 +60,33 @@ public class MusicApp {
             } else{
                 System.out.println("선택하신 곡을 재생하겠습니다.");
             }
+        } else{
+            System.out.println("어플을 먼저 실행시켜주세요.");
+        }
+    }
+
+    public void stopTheSong(){
+        if(isTurnOnTheApp){
+            if(isPlayMusic){
+                this.isPlayMusic = false;
+                System.out.println("음악이 꺼졌습니다.");
+            }else{
+                System.out.println("음악이 재생되고 있지 않습니다.");
+            }
+        } else{
+            System.out.println("어플을 먼저 실행시켜주세요.");
+        }
+    }
+
+    public void finishTheApp(){
+        if(isTurnOnTheApp){
+            if(isPlayMusic){
+                System.out.println("음악이 재생 중인 상태에서는 어플을 끌 수 없습니다.");
+            } else{
+                System.out.println("어플을 나갑니다.");
+            }
+        }else{
+            System.out.println("어플을 먼저 실행시켜주세요.");
         }
     }
 
