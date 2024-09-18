@@ -1,92 +1,75 @@
+import java.util.Scanner;
+
 public class MusicApp {
 
-    private boolean isTurnOnTheApp;
-    private boolean isPlayMusic;
-
-    public MusicApp(){};
+    protected String[] musicGenre = new String[]{"발라드", "힙합", " OST/BGM"};
+    protected int num;
+    protected boolean isOn;
+    protected boolean isPlay;
 
     public void startApp(){
-        if(isTurnOnTheApp){
-            System.out.println("이미 어플이 켜져있습니다.");
+        if(isOn){
+            System.out.println("이미 어플 실행 중입니다.");
         } else{
-            isTurnOnTheApp = true;
-            System.out.println("어플을 실행합니다. 듣고싶은 곡을 선택해주세요.");
+            isOn = true;
+            System.out.println("어플을 실행합니다.");
         }
     }
 
     public void chooseFisrtSong(){
-        if(isTurnOnTheApp){
-            if(isPlayMusic){
-                System.out.println("이미 곡을 선택하셨습니다.");
-            } else{
-                isPlayMusic = true;
-                System.out.println("곡을 선택하셨습니다.");
-            }
+
+        if(isOn){
+            isPlay = true;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("  ======== Genre List ========  ");
+            System.out.println("          1. 발라드             ");
+            System.out.println("          2. 힙합               ");
+            System.out.println("          3. OST / BGM         ");
+            System.out.println("  ===========================  ");
+            System.out.println("듣고 싶은 곡의 장르를 선택해주세요. : ");
+            num = sc.nextInt();
+            System.out.println(musicGenre[num - 1] + "을 선택하셨습니다.");
         } else{
-            System.out.println("어플을 먼저 실행시켜주세요.");
+            System.out.println("우선 어플을 실행시켜주세요.");
         }
     }
+
 
     public void playFisrtSong(){
-        if(isTurnOnTheApp){
-            if(isPlayMusic){
-                System.out.println("선택하신 곡을 재생하겠습니다.");
-            } else{
+        if(isOn){
+            if(isPlay){
+                System.out.println(musicGenre[num - 1] + " 관련 노래를 재생 중입니다.");
+            } else {
                 System.out.println("곡을 먼저 선택해주세요.");
             }
-        } else{
-            System.out.println("어플을 먼저 실행시켜주세요.");
+        } else {
+            System.out.println("우선 어플을 실행시켜주세요.");
         }
     }
 
-    public void chooseSecondSong(){
-        if(isTurnOnTheApp){
-            if(isPlayMusic){
-                isPlayMusic = false;
-                System.out.println("곡을 선택하셨습니다.");
-            } else{
-                System.out.println("곡을 선택하셨습니다.");
-            }
-        }else{
-            System.out.println("어플을 먼저 실행시켜주세요.");
-        }
-    }
-
-    public void playSecondSong(){
-        if(isTurnOnTheApp){
-            if(isPlayMusic){
-                // 아닌 것 같아 다시 해보기
-                System.out.println("이미 노래를 재생시키고 있습니다.");
-            } else{
-                System.out.println("선택하신 곡을 재생하겠습니다.");
-            }
-        } else{
-            System.out.println("어플을 먼저 실행시켜주세요.");
-        }
-    }
 
     public void stopTheSong(){
-        if(isTurnOnTheApp){
-            if(isPlayMusic){
-                this.isPlayMusic = false;
-                System.out.println("음악이 꺼졌습니다.");
-            }else{
-                System.out.println("음악이 재생되고 있지 않습니다.");
+        if(isOn){
+            if(isPlay){
+                System.out.println("노래 재생을 멈춥니다.");
+                isPlay = false;
+            } else {
+                System.out.println("이미 재생 중이 아닙니다.");
             }
-        } else{
-            System.out.println("어플을 먼저 실행시켜주세요.");
+        } else {
+            System.out.println("우선 어플을 실행시켜주세요.");
         }
     }
 
     public void finishTheApp(){
-        if(isTurnOnTheApp){
-            if(isPlayMusic){
-                System.out.println("음악이 재생 중인 상태에서는 어플을 끌 수 없습니다.");
-            } else{
-                System.out.println("어플을 나갑니다.");
+        if(isOn){
+            if(isPlay){
+                System.out.println("노래가 재생 중인 상태에서는 어플을 종료할 수 없습니다.");
+            } else {
+                System.out.println("어플을 종료합니다.");
             }
         }else{
-            System.out.println("어플을 먼저 실행시켜주세요.");
+            System.out.println("우선 어플을 실행시켜주세요.");
         }
     }
 
