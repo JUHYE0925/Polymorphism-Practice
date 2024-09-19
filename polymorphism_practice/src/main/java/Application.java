@@ -32,19 +32,19 @@ public class Application {
 
                 switch (num) {
                     case 1:
-                        dancer.startApp();
+                        user[0].startApp();
                         break;
                     case 2:
-                        dancer.chooseFisrtSong();
+                        user[0].chooseFisrtSong();
                         break;
                     case 3:
-                        dancer.playFisrtSong();
+                        user[0].playFisrtSong();
                         break;
                     case 4:
-                        dancer.stopTheSong();
+                        user[0].stopTheSong();
                         break;
                     case 5:
-                        dancer.finishTheApp();
+                        user[0].finishTheApp();
                         break;
                     case 9:
                         System.out.println("프로그램을 종료합니다.");
@@ -71,19 +71,19 @@ public class Application {
 
                 switch (num) {
                     case 1:
-                        singer.startApp();
+                        user[1].startApp();
                         break;
                     case 2:
-                        singer.chooseFisrtSong();
+                        user[1].chooseFisrtSong();
                         break;
                     case 3:
-                        singer.playFisrtSong();
+                        user[1].playFisrtSong();
                         break;
                     case 4:
-                        singer.stopTheSong();
+                        user[1].stopTheSong();
                         break;
                     case 5:
-                        singer.finishTheApp();
+                        user[1].finishTheApp();
                         break;
                     case 9:
                         System.out.println("프로그램을 종료합니다.");
@@ -110,19 +110,19 @@ public class Application {
 
                 switch (num) {
                     case 1:
-                        student.startApp();
+                        user[2].startApp();
                         break;
                     case 2:
-                        student.chooseFisrtSong();
+                        user[2].chooseFisrtSong();
                         break;
                     case 3:
-                        student.playFisrtSong();
+                        user[2].playFisrtSong();
                         break;
                     case 4:
-                        student.stopTheSong();
+                        user[2].stopTheSong();
                         break;
                     case 5:
-                        student.finishTheApp();
+                        user[2].finishTheApp();
                         break;
                     case 9:
                         System.out.println("프로그램을 종료합니다.");
